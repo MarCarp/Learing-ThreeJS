@@ -19,9 +19,7 @@ const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
 // The mesh can be updated after it has been added to the scene but BEFORE the scene is rendered
-mesh.position.x = 2;
-mesh.position.y = -1;
-mesh.position.z = -0.5;
+mesh.position.set(2,-1,-0.5);
 
 // Camera
 const camera = new THREE.PerspectiveCamera(75, size.width/size.heigh);
