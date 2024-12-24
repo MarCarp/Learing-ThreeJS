@@ -39,6 +39,12 @@ const distanceFromVector = mesh.position.distanceTo(new THREE.Vector3(0,2,5));
 console.log(distanceFromCamera);
 console.log(distanceFromVector);
 
+// normalize() adjusts the vector so its length becomes 1, keeping its direction unchanged
+
+mesh.position.normalize();
+
+console.log(mesh.position.length()); // equals 1
+
 // Renderer
 const renderer = new THREE.WebGLRenderer({
     canvas: mainCanvas
