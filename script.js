@@ -30,6 +30,15 @@ camera.position.z = 3;
 
 scene.add(camera);
 
+// Get the distance between two Objects (mesh and camera) Muste be AFTER camera initialization
+const distanceFromCamera = mesh.position.distanceTo(camera.position);
+
+// Get the distance between two Objects (mesh and instanciate Vector)
+const distanceFromVector = mesh.position.distanceTo(new THREE.Vector3(0,2,5));
+
+console.log(distanceFromCamera);
+console.log(distanceFromVector);
+
 // Renderer
 const renderer = new THREE.WebGLRenderer({
     canvas: mainCanvas
