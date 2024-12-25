@@ -45,6 +45,10 @@ mesh.position.normalize();
 
 console.log(mesh.position.length()); // equals 1
 
+// Axes Helper 
+const axesHelper = new THREE.AxesHelper();
+scene.add(axesHelper);
+
 // Renderer
 const renderer = new THREE.WebGLRenderer({
     canvas: mainCanvas
