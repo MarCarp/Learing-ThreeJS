@@ -1,5 +1,10 @@
 import * as THREE from 'three'
 
+const sizes = {
+	width: 800,
+	height: 600
+}
+
 // Scene
 
 const scene = new THREE.Scene()
@@ -13,3 +18,11 @@ const material = new THREE.MeshBasicMaterial({color: 0xff0000})
 const mesh = new THREE.Mesh(geometry, material)
 
 scene.add(mesh)
+
+// Camera
+
+const camera = new THREE.PerspectiveCamera(75, sizes.width/sizes.height)
+
+camera.position.z = 3
+
+scene.add(camera)
